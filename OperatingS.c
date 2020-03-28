@@ -45,7 +45,7 @@ label:	printf("Enter Number of Resources available :");
 	}
 	else
 	{
-		printf("Conditions are not satisfied so system is in unsafe state,there are chances of dead lock\n\n");
+		printf("Conditions are not satisfied so system is in unsafe state,\n So there are chances of dead lock\n\n");
 	}
 		while(1)
 		{
@@ -78,6 +78,24 @@ label:	printf("Enter Number of Resources available :");
 			if(count==q)
 			break;
 		}
+		printf("\n\n");
+		printf("\tAS LOOKING ABOVE\t");
+		printf("\n\n");
+		printf("No Dead Lock\n");
+		printf("DO YOU WANT TO CONTINUE:\n");
+		printf("Press 1 for yes\n");
+		printf("Press Anything for No\n");
+		int ch;
+		scanf("%d", &ch);
+		if(ch==1)
+		{
+			goto label;
+		}
+		else
+		{
+			return 0;
+			
+		}	
 					
 }
 
