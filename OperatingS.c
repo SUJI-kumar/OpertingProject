@@ -1,16 +1,13 @@
-/*Consider that a system has P resources of same type. These resources are shared by Q processes time to time. All processes 
-request and release the resources one at a time. Generate a solution to demonstrate that, the system is in safe state when 
-following conditions are satisfied. Conditions:
+/* Consider that a system has P resources of same type. These resources are shared by Q processes time to time. All processes 
+ request and release the resources one at a time. Generate a solution to demonstrate that, the system is in safe state when 
+ following conditions are satisfied. Conditions:
  1.  Maximum resource need of each process is between 1 and P.
- 2. Summation of all maximum needs is less than P+Q*/
+ 2. Summation of all maximum needs is less than P+Q  */
 #include<stdio.h>
-#include<conio.h>
 int main()
 {
-	
-	
 	int i,p,q,resource,max_need=0,count=0;
-label:	printf("Enter Number of Resources available :");
+ label:	printf("Enter Number of Resources available :");
 	scanf("%d",&p);
 	printf("\nEnter Number of Processes available :");
 	scanf("%d",&q);
@@ -19,7 +16,7 @@ label:	printf("Enter Number of Resources available :");
 	system("COLOR 0B");
 	for(i=0;i<q;i++)
 	{
-		printf("Enter number of resources required by Process %d\n",i+1);
+		printf("\nEnter number of resources required by Process %d\n",i+1);
 		scanf("%d",&process[i]);
 		End[i]=0;
 		allot[i]=0;
@@ -39,13 +36,13 @@ label:	printf("Enter Number of Resources available :");
 	{		
 		printf("\n\n");
 		
-		printf("#####*****####*******########");//creating difference
+		printf("#####*****####");
 		printf("\n\n");
-		printf("  Both Condition given are satisfied\n");//when both the uper given condition satisfied
+		printf("  Both Condition given are satisfied\n");
 	}
 	else
 	{
-		printf("Conditions are not satisfied so system is in unsafe state,\n So there are chances of dead lock\n\n");
+		printf("Conditions are not satisfied so system is in unsafe state,there are chances of dead lock\n\n");
 	}
 		while(1)
 		{
@@ -58,19 +55,18 @@ label:	printf("Enter Number of Resources available :");
 					{
 					allot[i]=allot[i]+1;
 					resource=resource-1;
-					printf("Process %d\n",i+1);
+					printf("Process %d + 1\n",i+1);
 					}
 					if(allot[i]==process[i])
 					{
-						printf("Process %d has completed\n",i+1);
+						printf("Process %d completed it execution\n",i+1);
 						End[i]=1;
 						resource=resource+process[i];
 						printf("Process %d - %d \n",i+1,process[i]);
-						printf("Process %d\n",i);
-						printf("Process %d has completed\n",i);
 					}
 				}
-			}for(i=0;i<q;i++)
+			}
+			for(i=0;i<q;i++)
 			{
 				if(End[i]==1)
 				count++;
@@ -93,9 +89,13 @@ label:	printf("Enter Number of Resources available :");
 		}
 		else
 		{
+			printf("Project done by\n SUJIT KUMAR\n ROll_No B45\n Section:K18KH");
 			return 0;
 			
 		}	
+						
+			
+					
 					
 }
 
