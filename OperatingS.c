@@ -58,7 +58,7 @@ label:	printf("Enter Number of Resources available :");
 					{
 					allot[i]=allot[i]+1;
 					resource=resource-1;
-					printf("Process %d + 1\n",i+1);
+					printf("Process %d\n",i+1);
 					}
 					if(allot[i]==process[i])
 					{
@@ -66,10 +66,18 @@ label:	printf("Enter Number of Resources available :");
 						End[i]=1;
 						resource=resource+process[i];
 						printf("Process %d - %d \n",i+1,process[i]);
+						printf("Process %d\n",i);
+						printf("Process %d has completed\n",i);
 					}
 				}
+			}for(i=0;i<q;i++)
+			{
+				if(End[i]==1)
+				count++;
 			}
-	}
+			if(count==q)
+			break;
+		}
 					
 }
 
