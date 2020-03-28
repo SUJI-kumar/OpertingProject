@@ -4,6 +4,7 @@ following conditions are satisfied. Conditions:
  1.  Maximum resource need of each process is between 1 and P.
  2. Summation of all maximum needs is less than P+Q*/
 #include<stdio.h>
+#include<conio.h>
 int main()
 {
 	
@@ -38,9 +39,9 @@ label:	printf("Enter Number of Resources available :");
 	{		
 		printf("\n\n");
 		
-		printf("#####*****####");
+		printf("#####*****####*******########");//creating difference
 		printf("\n\n");
-		printf("  Both Condition given are satisfied\n");
+		printf("  Both Condition given are satisfied\n");//when both the uper given condition satisfied
 	}
 	else
 	{
@@ -61,7 +62,7 @@ label:	printf("Enter Number of Resources available :");
 					}
 					if(allot[i]==process[i])
 					{
-						printf("Process %d completed it execution\n",i+1);
+						printf("Process %d has completed\n",i+1);
 						End[i]=1;
 						resource=resource+process[i];
 						printf("Process %d - %d \n",i+1,process[i]);
